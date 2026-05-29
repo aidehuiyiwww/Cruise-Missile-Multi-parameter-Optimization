@@ -1,0 +1,63 @@
+function IN =judge(x)
+IN=0;
+V0=x(1);
+Pmj=x(2);
+P1=x(3);
+P2=x(4);
+P0=x(5);
+[Gws, t04, Pmax5, Xd6, alpha_max7, a8, nyf9] = flight_model(V0, Pmj, P1, P2, P0);
+if(V0<=150)
+    IN=1;
+end
+if(V0>=200)
+    IN=1;
+end
+if(Pmj<=10)
+    IN=1;
+end
+if(Pmj>=16)
+    IN=1;
+end
+if(P1<=0)
+    IN=1;
+end
+if(P1>=1)
+    IN=1;
+end
+if(P2<=0)
+    IN=1;
+end
+if(P2>=1)
+    IN=1;
+end
+if(P2>=P1)
+    IN=1;
+end
+if(P1>2.2*P2)
+    IN=1;
+end
+if(P0<=300)
+    IN=1;
+end 
+if(P0>=500)
+    IN=1;
+end
+if(t04>=5)
+    IN=1;
+end
+if(Pmax5>=15)
+    IN=1;
+end
+if(Xd6>=8000)
+    IN=1;
+end
+if(alpha_max7>=8)
+    IN=1;
+end
+if(a8<0)
+    IN=1;
+end
+if(nyf9<2)
+    IN=1;
+end
+end
